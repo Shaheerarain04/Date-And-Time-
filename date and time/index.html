@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date And Time</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1><u>DATE AND TIME</u></h1>
+    <br>
+    <div id="time"></div>
+
+     <script>
+     setInterval(function(){
+     
+     let currentdate= new Date ();
+      let monthArr = ["Jan","Feb","Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"]
+      let date = currentdate.getDate();
+      let month = monthArr[currentdate.getMonth()];
+      let year = currentdate.getFullYear();
+      let hour = currentdate.getHours();
+      let min = currentdate.getMinutes();
+      let sec = currentdate.getSeconds();
+
+   let fullTime=`${date} - ${month} - ${year} ${hour} : ${min} : ${sec}`;
+  document.getElementById("time").innerHTML=fullTime
+     }, 1000)
+
+</script>
+
+</body>
+</html>
